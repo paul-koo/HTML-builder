@@ -13,3 +13,8 @@ process.stdin.on('data', (data) => {
 process.on('exit', () => {
     console.log('Спасибо, запись в файл программы завершена!');
 })
+
+process.on('SIGINT', () => {
+    console.log('Спасибо, запись в файл программы завершена!');
+    process.exit();
+})
